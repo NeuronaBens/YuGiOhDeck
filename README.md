@@ -1,5 +1,5 @@
 # YuGiOhDeck
 a virtual deck manager for yugioh!
 
-#Web Page
+# Web Page
 access link: https://neuronabens.github.io/YuGiOhDeck/
