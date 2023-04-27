@@ -1,0 +1,39 @@
+.yugi-card {
+  position: absolute;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  width: 118px; /* ancho fijo en píxeles */
+  height: 172px; /* alto fijo en píxeles */
+  background-size: contain;
+  background-position: center;
+  --rotate: 0deg; /*lo relacionado a rotacion*/
+  transform: rotate(var(--rotate));
+  transition: transform 0.3s ease-in-out;
+}
+
+.selected {
+  border: 3px solid green !important; /* Ancho, estilo y color del borde, el important es porque jerarquicamente, "#" supera a "." */
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -0%);
+}
+
+.face-down {
+  background-color: black !important;
+  background-blend-mode: multiply;
+}
+
+.rotate-90 {
+  --rotate: 90deg;
+}
+
+#field {
+  height: 200px;
+}
+
+#extra {
+  height: 200px;
+}

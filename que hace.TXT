@@ -1,0 +1,5 @@
+hace todo
+ya no se tiene que agregar mas, para la parte 
+del juego individual al menos.
+recuerda el uso de consola para 
+toda la funcionalidad.
