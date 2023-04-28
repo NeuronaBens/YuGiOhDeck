@@ -42,13 +42,21 @@ function kToggle(param) {
 //la funcion que muestra cosas en consola (cosas = z index and name)
 function showZIndexList() {
   const cards = document.querySelectorAll(".yugi-card");
+  const showOrderDiv = document.getElementById("show order");
+
+  if (showOrderDiv.innerHTML != "") {
+    showOrderDiv.innerHTML = "";
+    return
+  }
 
   for (let i = 0; i < cards.length; i++) {
     const card = cards[i];
     const zIndex = card.style.zIndex;
     const name = card.getAttribute("name");
 
-    console.log(`Card Name: ${name}, Z-Index: ${zIndex}, index: ${i}`);
+    const cardDetails = document.createElement("p");
+    cardDetails.innerText = `Card Name: ${name}, Z-Index: ${zIndex}, index: ${i}`;
+    showOrderDiv.appendChild(cardDetails);
   }
 }
 
