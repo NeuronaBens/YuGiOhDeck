@@ -44,8 +44,8 @@
 }
 
 .big-container img {
-  height: 100vh;
-  width: 100vw;
+  height: 95vh;
+  width: 95vw;
   object-fit: contain;
 }
 
