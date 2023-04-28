@@ -68,3 +68,28 @@ function createExtraDeckCard(image_link) {
   divElement.className = "yugi-card";
   divElement.style.backgroundImage = `url(${image_link})`;
 }
+
+function showBig() {
+  // Check if the "big-container" element is already in the document.
+  const bigContainer = document.querySelector(".big-container");
+  // If it's not, create it and add the image.
+  if (!bigContainer) {
+    const bigContainer = document.createElement("div");
+    const bigImage = document.createElement("img");
+    // Add the "big-container" class to the div element, which sets its size and position.
+    bigContainer.classList.add("big-container");
+    // Extract the URL of the background image from the "selected" global variable,
+    // which should be a div element with a background image set via CSS.
+    // Slice off the "url(" prefix and ")" suffix, and remove any quotes around the URL.
+    bigImage.src = selected.style.backgroundImage.slice(4, -1).replace(/"/g, "");
+    // Append the image element to the div element.
+    bigContainer.appendChild(bigImage);
+    // Insert the div element at the beginning of the body element,
+    // so it appears on top of all other content.
+    const firstChild = document.body.firstChild;
+    document.body.insertBefore(bigContainer, firstChild);
+  } else {
+    // If it is, remove it from the document.
+    bigContainer.remove();
+  }
+}

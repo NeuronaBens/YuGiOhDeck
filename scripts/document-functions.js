@@ -37,6 +37,10 @@ function kToggle(param) {
     rotate()
     p.innerText = "r"
   }
+  else if (key == "l"){
+    showBig()
+    p.innerText = "l"
+  }
 }
 
 //la funcion que muestra cosas en consola (cosas = z index and name)

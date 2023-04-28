@@ -30,6 +30,25 @@
   --rotate: 90deg;
 }
 
+.big-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   z-index: 999999; /* set a high z-index value */
+}
+
+.big-container img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: contain;
+}
+
 #field {
   height: 200px;
 }
